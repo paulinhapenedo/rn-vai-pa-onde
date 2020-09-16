@@ -20,6 +20,7 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		85ABD04888128580C1156CE5 /* libPods-VaiPaOnde.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C70EAE70A0D4C2655A0607 /* libPods-VaiPaOnde.a */; };
 		8974519CDC8AA36D95DD6481 /* libPods-VaiPaOnde-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9BD959AC435B37488F32D0A /* libPods-VaiPaOnde-tvOSTests.a */; };
+		F19BBF9C2512D5F900162D39 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19BBF9B2512D5F900162D39 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		D367AD6233B38D1245958BE5 /* libPods-VaiPaOnde-VaiPaOndeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VaiPaOnde-VaiPaOndeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		F19BBF9A2512D5F900162D39 /* VaiPaOnde-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VaiPaOnde-Bridging-Header.h"; sourceTree = "<group>"; };
+		F19BBF9B2512D5F900162D39 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,12 +162,14 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				F19BBF9B2512D5F900162D39 /* File.swift */,
 				13B07FAE1A68108700A75B9A /* VaiPaOnde */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* VaiPaOndeTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				E6DF5AB712006084CB168740 /* Pods */,
+				F19BBF9A2512D5F900162D39 /* VaiPaOnde-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -194,7 +199,6 @@
 				0A7AA8887580FBBE4E995075 /* Pods-VaiPaOnde-tvOSTests.debug.xcconfig */,
 				9D017750C864CCE4560C18D6 /* Pods-VaiPaOnde-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -294,7 +298,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1170;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -573,6 +577,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				F19BBF9C2512D5F900162D39 /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,6 +619,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 39E710831C21DDFF5E075B37 /* Pods-VaiPaOnde-VaiPaOndeTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -637,6 +643,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9BFC23F9D479C9961F07D109 /* Pods-VaiPaOnde-VaiPaOndeTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = VaiPaOndeTests/Info.plist;
@@ -670,6 +677,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = VaiPaOnde;
+				SWIFT_OBJC_BRIDGING_HEADER = "VaiPaOnde-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -692,6 +700,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = VaiPaOnde;
+				SWIFT_OBJC_BRIDGING_HEADER = "VaiPaOnde-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
